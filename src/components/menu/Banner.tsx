@@ -44,7 +44,6 @@ const Banner = () => {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="relative h-[220px] md:h-[320px] lg:h-[400px] xl:h-[480px] w-full overflow-hidden bg-[#2a1a0a]">
-        {/* Slides */}
         <div
           className="flex h-full w-full transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -56,10 +55,7 @@ const Banner = () => {
                 alt={slide.title}
                 className="absolute inset-0 h-full w-full object-cover object-center"
               />
-              {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-              {/* Text Content */}
               <div className="absolute bottom-8 left-5 text-white md:bottom-12 md:left-10 lg:left-16">
                 <h2 className="m-0 font-serif text-[26px] font-bold italic leading-tight tracking-wide drop-shadow-lg md:text-4xl lg:text-5xl">
                   {slide.title}
@@ -71,8 +67,6 @@ const Banner = () => {
             </div>
           ))}
         </div>
-
-        {/* Navigation Dots */}
         <div className="absolute bottom-5 right-4 flex items-center gap-1.5 md:right-8">
           {slides.map((_, i) => (
             <button
